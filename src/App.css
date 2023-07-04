@@ -1,38 +1,159 @@
-.App {
+
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', sans-serif;
+
+
+  background-color: var(--dark);
+
+  color: var(--white);
+}
+
+:root{
+  --orange: #F28C28;
+
+  --light-orange: #eda761;
+  
+  --dark: #1A1A1A;
+
+  --grey:  #2e2e2e;
+  
+  --white: #F0F0F0;
+}
+
+.todo__title{
+  font-size: 2.5rem;
+  color: var(--white);
+
   text-align: center;
+
+  padding: 25px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo{
   display: flex;
   flex-direction: column;
+
+  align-items: center;
+  align-content: center;
+
+  justify-content: center;
+  justify-items: center;
+
+}
+
+.todo__input{
+  display: flex;
+
+  align-items: center;
+}
+
+.todo__input-area{
+  background-color: var(--grey);
+  border: none;
+
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+
+  display: flex;
+  flex-direction: row;
+
+  align-content:center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  gap:10px
+
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.todo-list{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: space-between;
+
+  gap: 10px;
+  padding: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list__wrapper{
+  display: flex;
+
+  width: 100%;
+
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.todo-list__list-item{
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: default;
+}
+
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+.btn{
+  border: none;
+
+  width: 5vw;
+  height: 2.5vw;
+
+  border-radius: 4px;
+
+  margin: 0 5px;
+  padding: 0 10px;
+  transition: ease-in-out 0.3s;
+
+}
+
+.button--bgcolor-grey{
+  background-color: var(--grey);
+}
+.button--text-white{
+  color: var(--white);
+}
+
+.button--animation-hover:hover{
+  transition: ease-in-out 0.3s;
+  
+  cursor: pointer;
+  background-color: var(--light-orange);
+}
+
+.todo__edit{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  top: 0;
+  bottom: 0;
+  
+}
+
+.hidden{
+  display: none;
+}
+
+.added-todo-text-wrapper{
+  position: relative;
 }
